@@ -165,3 +165,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// Mobile Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector(".mobile-menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            toggleBtn.classList.toggle("open");
+        });
+        
+        // Close menu when clicking a link
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                toggleBtn.classList.remove("open");
+            });
+        });
+    }
+});
