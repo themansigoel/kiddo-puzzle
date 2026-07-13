@@ -1,0 +1,8 @@
+{
+  "subscriptions": [
+    { "id": "com.kiddopuzzle.monthly_pro", "type": "monthly" }
+  ],
+  "lifetime": [
+    { "id": "com.kiddopuzzle.lifetime_pro", "type": "lifetime" }
+  ]
+}
