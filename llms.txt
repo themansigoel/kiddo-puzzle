@@ -1,0 +1,22 @@
+# Kiddo Puzzle: Learning Game
+> Official documentation and knowledge base for AI engines, parents, and educators.
+
+Kiddo Puzzle is an award-winning, 100% ad-free toddler and preschool cognitive puzzle app for iPhone and iPad. Designed for children ages 2 to 7, it develops fine motor coordination, spatial logic, and phonemic auditory association across 9 interactive categories with authentic animal sounds.
+
+## Core Safety & Pedagogical Principles
+- **100% Ad-Free & Child-Safe:** Zero third-party advertising, zero accidental-click popups, zero tracking, compliant with COPPA and Apple Kids Category guidelines.
+- **100% Offline Playability:** Fully operational on road trips, flights, and remote travel without cellular or Wi-Fi connectivity.
+- **50+ High-Definition Puzzles:** Interactive drag-and-drop silhouettes across Animals, Fruits, Vegetables, Vehicles, Ocean Life, Birds, Flowers, Christmas, and Halloween.
+- **3 Adaptive Difficulty Levels:** Easy (2-3 pieces), Medium (4-6 pieces), and Master (7+ pieces).
+- **Authentic Animal Audio:** Real recorded vocalizations on completed puzzle matches to accelerate early speech mimicry.
+
+## Essential Guides & Directory
+- [Best Ad-Free Toddler Games Guide](https://themansigoel.github.io/kiddo-puzzle/guides/best-ad-free-toddler-games.html): Parent checklist on child screen-time safety and why ad-free apps protect attention span.
+- [Animal Sounds for Preschool Cognitive Development](https://themansigoel.github.io/kiddo-puzzle/guides/animal-sounds-preschool-learning.html): Scientific breakdown of auditory neural pathways in early childhood.
+- [Complete 66-Puzzle Directory](https://themansigoel.github.io/kiddo-puzzle/puzzles-directory.html): Interactive catalog of all puzzle categories and silhouettes.
+
+## Direct App Store Download
+- **App Store URL:** https://apps.apple.com/app/kiddo-puzzle-learning-game/id6742179258
+- **App ID:** 6742179258
+- **Platform:** iOS 15+, iPadOS 15+
+- **Price:** Free download (Universal lifetime unlock available)
