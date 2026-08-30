@@ -1,0 +1,18 @@
+# Robots.txt for Kiddo Puzzle
+User-agent: *
+Allow: /
+
+# Specifically allow Generative AI indexers for GEO/SGO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://themansigoel.github.io/kiddo-puzzle/sitemap.xml
