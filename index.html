@@ -44,7 +44,7 @@
       "applicationCategory": "EducationalApplication",
       "genre": "Educational Puzzle Game",
       "screenshot": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/32/56/a8/3256a8d1-c1b9-5f0e-388d-cf1cdac71f49/Placeholder.mill/1200x630wa.jpg",
-      "softwareVersion": "1.0",
+      "softwareVersion": "1.0.3",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -311,7 +311,46 @@
         </div>
     </section>
 
-    </main>
+    
+    <!-- Interactive Mini Puzzle Micro-Demo -->
+    <section id="interactive-mini-puzzle" style="max-width: 800px; margin: 40px auto; padding: 30px 20px; background: #eff6ff; border: 2px solid #93c5fd; border-radius: 20px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+        <h2 style="color: #1e40af; margin-top: 0; font-size: 1.8rem;">🧩 Play a Quick Puzzle Online</h2>
+        <p style="color: #1e3a8a; margin-bottom: 20px;">Click on the matching silhouette to solve the puzzle!</p>
+        
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 20px 0; flex-wrap: wrap;">
+            <div style="background: #ffffff; border: 2px dashed #3b82f6; border-radius: 16px; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                🦁
+            </div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: #3b82f6;">➔ Match to:</div>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="matchPuzzle(false)" style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; width: 80px; height: 80px; font-size: 2.2rem; cursor: pointer;">🐘</button>
+                <button onclick="matchPuzzle(true)" style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; width: 80px; height: 80px; font-size: 2.2rem; cursor: pointer;">🦁</button>
+                <button onclick="matchPuzzle(false)" style="background: #ffffff; border: 2px solid #cbd5e1; border-radius: 12px; width: 80px; height: 80px; font-size: 2.2rem; cursor: pointer;">🐻</button>
+            </div>
+        </div>
+
+        <div id="puzzle-feedback" style="margin-top: 15px; font-size: 1.2rem; font-weight: 700; color: #2563eb; min-height: 30px;">Choose the matching animal!</div>
+
+        <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #bfdbfe; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <span style="color: #1e40af; font-weight: 600;">Unlock 50+ ad-free puzzles with authentic animal sounds:</span>
+            <a href="https://apps.apple.com/app/kiddo-puzzle-learning-game/id6742179258" style="background: #2563eb; color: #fff; padding: 10px 22px; border-radius: 20px; font-weight: 700; text-decoration: none;">Download Kiddo Puzzle 📲</a>
+        </div>
+    </section>
+
+    <script>
+    function matchPuzzle(isMatch) {
+        const feedback = document.getElementById('puzzle-feedback');
+        if (isMatch) {
+            feedback.innerHTML = "🎉 ROAR! Perfect Match! Great job! ⭐⭐⭐";
+            feedback.style.color = "#16a34a";
+        } else {
+            feedback.innerHTML = "❌ Oops, try again!";
+            feedback.style.color = "#dc2626";
+        }
+    }
+    </script>
+
+</main>
 
     <!-- Footer Section -->
     <footer class="footer">
