@@ -3,9 +3,12 @@
 ## Version 1.4.0 (Latest — In Staging / Metadata Synchronized)
 - **High-Intent ASO Architecture:** Title formula transformed to `Shape Puzzles - Kiddo Puzzle` (Search Intent First + Exact Brand).
 - **8-Locale Global Coverage:** Full localized Titles, Subtitles, and 100-character Keyword knapsacks pushed across `en-US`, `es-ES`, `pt-BR`, `fr-FR`, `de-DE`, `ja`, `zh-Hans`, and `ko`.
-- **Deduplicated Keywords:** Zero token overlap between Title, Subtitle, and Keyword fields. Zero misleading "wooden" references.
+- **End-of-Free-Sample Celebration Dialog:** Proactive celebration prompt upon completing the 2nd puzzle in any category, inviting parents to unlock the full 10-theme library (*Space, Vehicles, Aquatic*).
+- **Soft First-Launch Onboarding Sheet:** 1-page welcome highlighting 100% Ad-Free, Kid-Safe COPPA compliance and Lifetime Pro access.
+- **Strict Apple Guideline 1.3 Parental Gate Flow:** All commercial purchasing touchpoints route through arithmetic verification (`ParentsHelpView`) before presenting `PaywallView`.
+- **End-to-End Localization (149 Keys):** 100% key parity across all 8 global language files, eliminating all hardcoded English strings.
 - **Paywall Conversion Polish:** Pre-selects Lifetime Pro as Hero option, StoreKit 2 transaction verification, and full iPad split-screen landscape support.
-- **Review Prompt Timing:** `SKStoreReviewController` requests reviews at euphoric milestone moments (after 3 completed puzzles, 1.5s post-confetti delay, 7-day cooldown).
+- **Upgraded Review Policy:** Instant post-purchase review prompt + 2nd puzzle early delight trigger with 3-day active cooldown.
 - **10 Interactive Categories:** 50+ puzzles across Animals, Birds, Fruits, Vegetables, Vehicles, Aquatic, Space, Flowers, Halloween, and Christmas.
 
 ## Version 1.3.0 (Space Adventure & Global Expansion)
