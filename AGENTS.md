@@ -96,3 +96,21 @@ sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT report_date, product_type_id, su
 
 ## 📋 Release History & Documentation
 Refer to [`RELEASE_NOTES.md`](RELEASE_NOTES.md) and `/Users/rahulgoel/aso-intelligence/PORTFOLIO_RELEASE_HISTORY.md` for full version history and release notes.
+
+---
+
+## ⭐ Proven High-Converting App Store Review & Rating Architecture
+
+1. **Immediate Post-Purchase Delight (#1 5★ Driver)**:
+   - Always trigger `SKStoreReviewController.requestReview()` **1.5s after successful IAP / Subscription purchase**.
+2. **First-Session Drop-off Prevention (Early Delight Trigger)**:
+   - Trigger on the **2nd completed core action / victory** (e.g. 2nd puzzle completed, 2nd stretch completed).
+3. **Category / Pack Mastery & Euphoria**:
+   - Trigger immediately upon completing a full set/category (e.g. 6/6 medals in a pack, 108th bead).
+4. **Streak / Daily Reward Milestone**:
+   - Trigger when claiming Day 3 or Day 7 streak reward.
+5. **Standard Timing Rules**:
+   - **3-Day Active Cooldown** (never 7+ days which misses active user momentum).
+   - **1.5s Animation Delay** after celebratory confetti/haptics.
+   - **Zero Negative Moments**: NEVER prompt on launch, on error, on cancel, or during active flow.
+   - **No Permission Stacking**: Never ask for Push Notifications and App Review in the same session.
