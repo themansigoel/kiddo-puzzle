@@ -32,6 +32,10 @@ This document outlines the operational rules, data schemas, API interfaces, and 
 2. **Explicit Exclusions**: Do NOT track or scan `Cookie King` (`6773855897`) or `Block Master` (`6778909840`).
 3. **Pending Apps**: When `GrowFocus` (`6774886246`) or `Gym Workout` (`6761177535`) are approved and live, add their IDs to `apps.json`.
 4. **Strict Real Apple API Verification Mandate**: NEVER guess, assume, or rely on stale local JSON files for live App Store metadata (Title, Subtitle, Keywords, Version, State). ALWAYS query the real App Store Connect API (`asc.rb GET "/v1/apps/<id>/appInfos?include=appInfoLocalizations"` and `/v1/apps/<id>/appStoreVersions?include=appStoreVersionLocalizations`) before analyzing, auditing, or creating plans.
+5. **🛑 ZERO ASSUMPTION & STRICT REAL DATA MANDATE (CRITICAL RULE FOR ALL AGENTS)**:
+   - **NEVER Assume, Guess, or Extrapolate Code, Features, or App Architecture**: Never conclude that an app lacks a feature, review trigger, paywall tier, localization, or logic without thoroughly searching and reading the actual source code call-sites across the entire project. Trace all function definitions AND all their invocations before providing critique or recommendations.
+   - **NEVER Assume or Extrapolate Metrics**: Never invent, estimate, or extrapolate metrics (sales, units, proceed figures, ratings, ranks, difficulty, keyword volumes, or review counts). ALWAYS query the real App Store Connect API, live SQLite database (`~/.vibe-aso/aso_intelligence.db`), or `./aso` CLI before reporting numbers or drawing insights.
+   - **Always Verify Git & Release Context**: Check recent git commits (`git log`), release history (`PORTFOLIO_RELEASE_HISTORY.md`), and version release dates to understand when a feature went live before drawing conclusions about user adoption or rating velocity.
 
 ---
 
@@ -225,9 +229,27 @@ Every app in the portfolio must implement this standardized, high-converting `SK
 ### 2. Standardized Timing & Safety Rules:
 - **3-Day Active Cooldown**: Space subsequent milestone prompt attempts by at least **3 days** (never 7+ days which misses active user momentum).
 - **Apple Quota Harmony**: Apple natively limits `SKStoreReviewController` to **3 system prompts per 365-day period per user**. Keeping client cooldown at 3 days ensures the system prompt appears the exact moment Apple's OS quota unlocks.
-- **1.5-Second Animation Buffer**: Always delay `SKStoreReviewController` by 1.5 seconds so celebratory confetti, haptics, and medal animations complete before the dialog appears.
+- **1.5-Second Animation Buffer & Modal Decoupling**: Always delay `SKStoreReviewController` by 1.5 seconds after paywall or modal dismissal so celebratory animations complete and the active `UIWindowScene` has fully settled before the dialog appears. Never trigger while modal transitions are in-flight to prevent UI hanging on "Submit".
 - **Strict Negative Moment Ban**: NEVER prompt on launch, during active flow/timers, on transaction failure/cancellation, on errors, or on paywall dismissal.
 - **Permission Stacking Ban**: NEVER trigger Push Notification system permission dialogs and StoreKit Review dialogs in the same session.
+
+---
+
+## ⚡ Apple Design Award Level: 120Hz ProMotion Tactile Haptics & Non-Blocking Performance Architecture
+
+Every iOS app in the portfolio must follow these strict performance rules in its `HapticManager` to guarantee 120 FPS fluid interactions, 0ms latency, and zero UI hanging:
+
+1. **`CACurrentMediaTime()` High-Performance Micro-Debouncing (30ms Threshold)**:
+   - Rapid tab clicking, aggressive button tapping, or continuous slider dragging must never flood the iOS Taptic Engine IPC queue.
+   - Any haptic signals firing within $<30\text{ms}$ (or $<35\text{ms}$ for piece snapping/ticks) must be dropped before reaching UIKit IPC, keeping the main runloop completely unburdened for 120 FPS animations.
+2. **Non-Blocking Thread Safety (`performOnMain`)**:
+   - Audio, game physics, timer callbacks, and background event loops must check `Thread.isMainThread` directly—executing immediately if on main, or dispatching asynchronously via `DispatchQueue.main.async` to avoid thread hopping and blocking background processing.
+3. **Elimination of Hot-Path `.prepare()` Latency**:
+   - Feedback generators must be pre-warmed once at app launch (`prepareAll()`). Redundant synchronous `.prepare()` calls during active touches, drag gestures, and tab transitions must be avoided to prevent motor spin-up hitches.
+4. **Silky Tab Switching & Responsive Navigation**:
+   - Tab transitions (`TabView` / `onChange(of: selectedTab)`) and navigation links must invoke debounced haptics (`selectionChanged()`), allowing SwiftUI navigation containers to switch views instantly with zero frame stutter.
+5. **Decoupled Modal Dismissal & Zero-Hang Review Submission**:
+   - Never trigger `SKStoreReviewController.requestReview` during an active modal presentation or dismiss animation. Always allow the presenting sheet to fully settle ($1.5\text{s}$ buffer) before requesting review so `StoreKitUIService` maintains the active responder chain and the "Submit" button never hangs.
 
 ---
 
