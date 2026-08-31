@@ -1,16 +1,27 @@
 # Kiddo Puzzle — Release Notes
 
-## Version 1.4.0 (Latest — In Staging / Metadata Pushed)
-- **High-Intent ASO Metadata Engine:** Title formula updated to `Shape Puzzles - Kiddo Puzzle` (Search Intent First).
-- **8-Locale Global Coverage:** Full localized Titles, Subtitles, and 100-character Keyword knapsacks across `en-US`, `es-ES`, `pt-BR`, `fr-FR`, `de-DE`, `ja`, `zh-Hans`, and `ko`.
-- **Deduplicated Keywords:** Zero token overlap between Title, Subtitle, and Keyword fields. Zero misleading wooden references.
+## Version 1.4.0 (Latest — In Staging / Metadata Synchronized)
+- **High-Intent ASO Architecture:** Title formula transformed to `Shape Puzzles - Kiddo Puzzle` (Search Intent First + Exact Brand).
+- **8-Locale Global Coverage:** Full localized Titles, Subtitles, and 100-character Keyword knapsacks pushed across `en-US`, `es-ES`, `pt-BR`, `fr-FR`, `de-DE`, `ja`, `zh-Hans`, and `ko`.
+- **Deduplicated Keywords:** Zero token overlap between Title, Subtitle, and Keyword fields. Zero misleading "wooden" references.
+- **Paywall Conversion Polish:** Pre-selects Lifetime Pro as Hero option, StoreKit 2 transaction verification, and full iPad split-screen landscape support.
+- **Review Prompt Timing:** `SKStoreReviewController` requests reviews at euphoric milestone moments (after 3 completed puzzles, 1.5s post-confetti delay, 7-day cooldown).
 - **10 Interactive Categories:** 50+ puzzles across Animals, Birds, Fruits, Vegetables, Vehicles, Aquatic, Space, Flowers, Halloween, and Christmas.
 
-## Version 1.0.3 / 1.3 (Live on App Store)
-- **Multi-Territory PPP Pricing:** Full parity pricing active across USA ($4.99), India (₹149 INR), Brazil (R$ 14,90), and Japan (¥400).
-- **Toddler Shape Matching Engine:** Interactive puzzle physics with vibrant sound effects and rewarding milestone animations.
-- **Enhanced Parent Gate:** Safeguarded in-app purchases and settings with arithmetic verification.
-- **Performance Polish:** Zero lag on older iPad and iPhone models with optimized SpriteKit assets.
+## Version 1.3.0 (Space Adventure & Global Expansion)
+- **Space Adventure Theme:** Rocket, planet, and star matching puzzles with interactive audio.
+- **Aquatic Category:** Underwater creature matching with vibrant animations.
+- **Multi-Language Expansion:** Full 8-language localization framework.
+- **Daily Visit Reward:** Centered home screen streak reward popup with 7-day bonus level unlocking.
+- **Dark Mode Paywall Fix:** Resolved contrast visibility on dark appearance settings.
 
-## Version 1.0.0 – 1.0.2
-- Initial App Store launch: Preschool shape puzzles, baby animal themes, and colorful wooden block matching.
+## Version 1.2.0 (Audio & Physics Polish)
+- **Toddler Shape Matching Engine:** Interactive puzzle physics with vibrant sound effects and rewarding medal animations.
+- **Authentic Audio:** High-quality animal vocalizations and clear speech pronunciations.
+
+## Version 1.1.0 (Safety & Parental Controls)
+- **Enhanced Parent Gate:** Arithmetic verification protecting in-app purchases and external links (`ParentsHelpView`).
+- **StoreKit 2 Support:** Secure in-app purchase flow for Lifetime Pro and Monthly Subscription.
+
+## Version 1.0.0 (Initial Launch)
+- Initial App Store launch: Preschool shape puzzles, baby animal themes, and interactive matching.
